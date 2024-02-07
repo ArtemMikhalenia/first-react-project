@@ -18,7 +18,6 @@ export default function App() {
 			<main>
 				<section>
 					<h3>Наш подход к обучению</h3>
-
 					<ul>
 						<WayToTeach
 							title={ways[0].title}
@@ -36,6 +35,11 @@ export default function App() {
 					<Button onClick={() => handleClick("easy")}>Доступность</Button>
 					<Button onClick={() => handleClick("program")}>Концентрация</Button>
 
+					{contentType ? (
+						<p>{differences[contentType]}</p>
+					) : (
+						<p>Нажми на кнопку</p>
+					)}
 					<p>{differences[contentType]}</p>
 				</section>
 			</main>
